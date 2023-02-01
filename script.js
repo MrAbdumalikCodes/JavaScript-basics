@@ -1,4 +1,4 @@
-//Bind 
+// Call , Apply
 const data ={
     name:'John',
     age:23,
@@ -14,10 +14,12 @@ const employes = {
     age:18,
     job:'Software engineer'
 }
+const employes2 = {
+    name:'Jack',
+    age:27,
+    job:'Full stack'
+}
 
-const fullInfo = data.personInfo.bind(employes,'+998-91-425-4848')()
+const fullInfo = data.personInfo.apply(employes,['+998-91-425-4848']) // apply - bunga ikkinchi qiymatida [] massiv berishimiz kerak.
 
-//1. const fullInfo = data.personInfo.bind(employes)
-// fullInfo('+998-91-222-7878');
-
-//2.const fullInfo = data.personInfo.bind(employes,'+998-91-425-4848')();
+const fullInfos = data.personInfo.call(employes,'+998-91-425-4848') // call - bunda biz funksiyani chaqirishimiz kerak emas call ni uzi funksiya chaqirib ketadi.
