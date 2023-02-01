@@ -1,7 +1,11 @@
-const array = [1,2,3,4,5]
-Array.prototype.mult = function(num){
-    return this.map((i) => {
-        return i * num
-    })
+//1)  Funksiya konstruktor
+
+function User(name,id){
+    this.name = name
+    this.id = id
+    this.human = true
 }
-console.log(array.mult(2));
+const employ = new User('Jack',1)
+const some = new User('John',21)
+console.log(employ);
+console.log(some);
