@@ -1,8 +1,6 @@
-//*********** POST ***********/
-fetch('https://jsonplaceholder.typicode.com/posts',{
-    method:"POST",
-    body:JSON.stringify({name:'Lisa'}),
-    headers:{'Content-type' : '/application/json'}
-})
-      .then(response => response.json())
-      .then(json => console.log(json))
+const number = 8;
+
+localStorage.setItem('number',number.toString()) 
+console.log(localStorage.getItem('number')); // 8
+console.log(localStorage.removeItem('number')) // itemlarni localStoragedan uchirish uchun foydalaniladi.
+localStorage.clear() // localStorageni bo'sh qilib quyadi hammasini uchirib tashlaydi.
